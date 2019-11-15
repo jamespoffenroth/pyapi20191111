@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 """Russell Zachary Feeser Using etcd to design a RESTful ticket server"""
+# Excellent example of HTTP GET, PUT, POST, and DELETE
+# Excellent example of script design (main calls all the functions we designed above it)
+# Excellent example of calling a function within a function (updateticket calls getoneticket)
 
 import requests
 

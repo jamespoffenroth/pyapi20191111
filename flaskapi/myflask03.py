@@ -12,9 +12,12 @@ def hello_guest(guest):
 
 @app.route("/user/<name>")
 def hello_user(name):
+    # If you go to hello_user with a value of admin
     if name =="admin":
+        # Return a 3xx response to redirect to /admin
         return redirect(url_for("hello_admin"))
     else:
+        # Return a 3xx response to redirect to /guest/<guest>
         return redirect(url_for("hello_guest", guest = name))
 
 if __name__ == "__main__":

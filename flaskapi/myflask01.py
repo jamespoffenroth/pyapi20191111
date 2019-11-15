@@ -7,10 +7,16 @@ from flask import Flask
 app = Flask(__name__)
 
 # route() function of the Flask class tells the application which URL should call the associated function
+# If we receive an HTTP GET to this path, call the hello_world function
+# You can have multiple decorators listed that all call the same function
 @app.route("/")
 def hello_world():
    return "Hello World"
 
+@app.route("/hello/breaktime")
+def takeabreak():
+    return "I think it is time for a 10 minute break."
+
+# This runs the application. Can be any port, but you want to use a port that is not in use
 if __name__ == "__main__":
-   app.run(port=5006) # runs the application
-   # app.run(port=5006, debug=True) # DEBUG MODE
+   app.run(port=5006)
